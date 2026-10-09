@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Little Love Story ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================================
+         BACKGROUND EFFECTS
+    ================================= -->
+
+    <div class="background"></div>
+
+    <div class="aurora aurora-1"></div>
+    <div class="aurora aurora-2"></div>
+    <div class="aurora aurora-3"></div>
+
+    <div id="particles"></div>
+    <div id="petals"></div>
+
+    <div id="heartBurst"></div>
+
+
+    <!-- ================================
+         MUSIC
+    ================================= -->
+
+    <audio id="music" loop>
+        <source src="music/love.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn">
+        ♫
+    </button>
+
+
+    <!-- =====================================================
+         PAGE 1 — INTRO
+    ====================================================== -->
+
+    <section class="page intro-page active-page" id="introPage">
+
+        <div class="intro-content">
+
+            <div class="eyebrow">
+                SPECIAL GIFT FOR YOU
+            </div>
+
+            <div class="big-heart">
+                <span>♥</span>
+            </div>
+
+            <h1>
+                Món quà đặc biệt
+                <br>
+                <em>cho em</em>
+            </h1>
+
+            <p>
+                Có những khoảnh khắc chỉ cần nhìn lại...
+                <br>
+                là cả một bầu trời cảm xúc ùa về.
+            </p>
+
+            <button
+                class="primary-btn"
+                id="startBtn"
+            >
+                <span>Cùng xem lại hành trình nhé</span>
+                <b>♡</b>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 2 — PHOTO GALLERY
+    ====================================================== -->
+
+    <section class="page gallery-page" id="galleryPage">
+
+        <div class="page-header">
+
+            <div class="memory-counter">
+                <strong id="currentNumber">01</strong>
+                <span>/</span>
+                <small>10</small>
+            </div>
+
+            <div class="header-title">
+                OUR MEMORIES
+            </div>
+
+        </div>
+
+
+        <div class="photo-stage">
+
+            <div
+                class="photo-back photo-back-1"
+                id="backPhoto1"
+            ></div>
+
+            <div
+                class="photo-back photo-back-2"
+                id="backPhoto2"
+            ></div>
+
+
+            <div
+                class="photo-wrapper"
+                id="photoWrapper"
+            >
+
+                <div class="photo-glow"></div>
+
+                <img
+                    id="mainPhoto"
+                    src="images/01.jpg"
+                    alt="Our memory"
+                >
+
+                <div class="photo-shine"></div>
+
+            </div>
+
+            <div class="floating-heart heart-a">♥</div>
+            <div class="floating-heart heart-b">♡</div>
+            <div class="floating-heart heart-c">♥</div>
+
+        </div>
+
+
+        <div class="caption">
+
+            <div></div>
+
+            <p id="captionText">
+                Khoảnh khắc đầu tiên...
+            </p>
+
+            <div></div>
+
+        </div>
+
+
+        <div class="gallery-controls">
+
+            <button id="prevBtn">
+                ←
+            </button>
+
+            <div
+                class="dots"
+                id="dots"
+            ></div>
+
+            <button id="nextBtn">
+                →
+            </button>
+
+        </div>
+
+
+        <button
+            class="continue-gallery"
+            id="continueGallery"
+        >
+            <span>Tiếp tục câu chuyện</span>
+            <b>→</b>
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 3 — CHOOSE DATE
+    ====================================================== -->
+
+    <section
+        class="page choice-page"
+        id="datePage"
+    >
+
+        <div class="choice-container">
+
+            <div class="step-number">
+                02 / 05
+            </div>
+
+            <div class="choice-icon">
+                ♡
+            </div>
+
+            <h2>
+                Khi nào mình
+                <br>
+                <em>đi hẹn hò?</em>
+            </h2>
+
+            <p class="choice-description">
+                Chọn một ngày thật đẹp cho hai đứa mình nhé.
+            </p>
+
+
+            <div class="date-box">
+
+                <label>
+                    NGÀY HẸN
+                </label>
+
+                <input
+                    type="date"
+                    id="dateInput"
+                >
+
+            </div>
+
+
+            <div class="date-box">
+
+                <label>
+                    GIỜ HẸN
+                </label>
+
+                <input
+                    type="time"
+                    id="timeInput"
+                >
+
+            </div>
+
+
+            <div class="selection-hint" id="dateHint">
+                ♡ Chọn ngày và giờ cho buổi hẹn
+            </div>
+
+
+            <button
+                class="primary-btn"
+                id="dateNextBtn"
+            >
+                <span>Tiếp tục</span>
+                <b>→</b>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 4 — FOOD
+    ====================================================== -->
+
+    <section
+        class="page choice-page food-page"
+        id="foodPage"
+    >
+
+        <div class="choice-container wide">
+
+            <div class="step-number">
+                03 / 05
+            </div>
+
+            <div class="choice-icon">
+                ♡
+            </div>
+
+            <h2>
+                Hôm đó mình
+                <br>
+                <em>ăn gì nhỉ?</em>
+            </h2>
+
+            <p class="choice-description">
+                Chọn bao nhiêu món cũng được.
+                <br>
+                Miễn là hai đứa cùng thích.
+            </p>
+
+
+            <div
+                class="option-grid"
+                id="foodOptions"
+            >
+
+                <button
+                    class="option-card"
+                    data-value="Anh"
+                >
+                    <span class="option-emoji">🤤</span>
+                    <strong>Anh</strong>
+                    <small>Món ngon nhất</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Đồ nướng"
+                >
+                    <span class="option-emoji">🫕</span>
+                    <strong>Đồ nướng</strong>
+                    <small>Cùng nhau "hâm nóng" nhá</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Gà rán"
+                >
+                    <span class="option-emoji">🍗</span>
+                    <strong>Gà rán</strong>
+                    <small>Ăn cho đã nha</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Lẩu"
+                >
+                    <span class="option-emoji">🍲</span>
+                    <strong>Lẩu</strong>
+                    <small>Ấm bụng</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Trà sữa"
+                >
+                    <span class="option-emoji">🧋</span>
+                    <strong>Trà sữa</strong>
+                    <small>Không thể thiếu!!</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Bánh ngọt"
+                >
+                    <span class="option-emoji">🍰</span>
+                    <strong>Bánh ngọt</strong>
+                    <small>Ngọt như em</small>
+                </button>
+
+            </div>
+
+
+            <div class="selected-summary">
+                <span>Đã chọn:</span>
+                <strong id="foodSummary">
+                    Chưa chọn món nào
+                </strong>
+            </div>
+
+
+            <button
+                class="primary-btn"
+                id="foodNextBtn"
+            >
+                <span>Tiếp tục</span>
+                <b>→</b>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 5 — PLACES
+    ====================================================== -->
+
+    <section
+        class="page choice-page places-page"
+        id="placesPage"
+    >
+
+        <div class="choice-container wide">
+
+            <div class="step-number">
+                04 / 05
+            </div>
+
+            <div class="choice-icon">
+                ♡
+            </div>
+
+            <h2>
+                Còn mình sẽ
+                <br>
+                <em>đi đâu?</em>
+            </h2>
+
+            <p class="choice-description">
+                Chọn những nơi em muốn cùng anh đi nhé.
+            </p>
+
+
+            <div
+                class="option-grid place-grid"
+                id="placeOptions"
+            >
+
+                <button
+                    class="option-card"
+                    data-value="Đi cafe"
+                >
+                    <span class="option-emoji">☕</span>
+                    <strong>Đi cafe</strong>
+                    <small>Ngồi cạnh nhau thật lâu</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Xem phim"
+                >
+                    <span class="option-emoji">🎬</span>
+                    <strong>Xem phim</strong>
+                    <small>Ngồi cạnh nhau trong rạp</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Đi dạo"
+                >
+                    <span class="option-emoji">🌳</span>
+                    <strong>Đi dạo</strong>
+                    <small>Chậm rãi một chút</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Ngắm hoàng hôn"
+                >
+                    <span class="option-emoji">🌅</span>
+                    <strong>Hoàng hôn</strong>
+                    <small>Cùng nhìn trời đổi màu</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Đi ăn vặt"
+                >
+                    <span class="option-emoji">🍻</span>
+                    <strong>Đi ăn vặt</strong>
+                    <small>Đi ăn cho đã cái nư</small>
+                </button>
+
+
+                <button
+                    class="option-card"
+                    data-value="Chụp ảnh"
+                >
+                    <span class="option-emoji">📸</span>
+                    <strong>Chụp ảnh</strong>
+                    <small>Lưu thêm thật nhiều kỷ niệm</small>
+                </button>
+
+            </div>
+
+
+            <div class="selected-summary">
+                <span>Đã chọn:</span>
+                <strong id="placeSummary">
+                    Chưa chọn nơi nào
+                </strong>
+            </div>
+
+
+            <button
+                class="primary-btn"
+                id="placeNextBtn"
+            >
+                <span>Xem kế hoạch</span>
+                <b>→</b>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 6 — CONFIRM
+    ====================================================== -->
+
+    <section
+        class="page confirm-page"
+        id="confirmPage"
+    >
+
+        <div class="confirm-container">
+
+            <div class="step-number">
+                05 / 05
+            </div>
+
+
+            <div class="date-card">
+
+                <div class="card-top">
+
+                    <span>
+                        OUR LITTLE DATE
+                    </span>
+
+                    <b>
+                        ♡
+                    </b>
+
+                </div>
+
+
+                <div class="card-title">
+                    Date của
+                    <em>chúng ta</em>
+                </div>
+
+
+                <div class="card-date">
+
+                    <strong id="confirmDate">
+                        --
+                    </strong>
+
+                    <span id="confirmTime">
+                        --
+                    </span>
+
+                </div>
+
+
+                <div class="card-divider"></div>
+
+
+                <div class="card-section">
+
+                    <label>
+                        MÌNH SẼ ĂN
+                    </label>
+
+                    <div
+                        id="confirmFood"
+                        class="confirm-items"
+                    ></div>
+
+                </div>
+
+
+                <div class="card-section">
+
+                    <label>
+                        MÌNH SẼ ĐI
+                    </label>
+
+                    <div
+                        id="confirmPlaces"
+                        class="confirm-items"
+                    ></div>
+
+                </div>
+
+
+                <div class="card-quote">
+                    "Mình đi như vậy nha?"
+                </div>
+
+            </div>
+
+
+            <div class="confirm-actions">
+
+                <button
+                    class="secondary-btn"
+                    id="editBtn"
+                >
+                    ← Chọn lại
+                </button>
+
+                <button
+                    class="primary-btn"
+                    id="confirmBtn"
+                >
+                    <span>Đồng ý đi hẹn hò</span>
+                    <b>♥</b>
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 7 — ENVELOPE
+    ====================================================== -->
+
+    <section
+        class="page envelope-page"
+        id="envelopePage"
+    >
+
+        <div class="envelope-container">
+
+            <p class="envelope-intro">
+                Anh có một điều muốn nói với em...
+            </p>
+
+
+            <div
+                class="envelope"
+                id="envelope"
+            >
+
+                <div class="envelope-back"></div>
+
+                <div class="letter-paper">
+
+                    <div class="letter-mini-title">
+                        FOR YOU ♡
+                    </div>
+
+                    <div class="letter-line"></div>
+
+                </div>
+
+                <div class="envelope-front"></div>
+
+                <div class="envelope-flap"></div>
+
+                <div class="wax-seal">
+                    ♥
+                </div>
+
+            </div>
+
+
+            <button
+                class="open-letter-btn"
+                id="openLetterBtn"
+            >
+                Mở thư ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 8 — LETTER
+    ====================================================== -->
+
+    <section
+        class="page letter-page"
+        id="letterPage"
+    >
+
+        <div class="letter-wrapper">
+
+            <div class="paper-decoration decoration-1">
+                ✦
+            </div>
+
+            <div class="paper-decoration decoration-2">
+                ♡
+            </div>
+
+
+            <article class="love-letter">
+
+                <div class="letter-heading">
+                    <span>09.10.2026</span>
+
+                    <div>
+                        ♡
+                    </div>
+                </div>
+
+
+                <h2>
+                    Gửi bé nâu,
+                </h2>
+
+
+                <div class="letter-body">
+
+                    <p>
+                        Cảm ơn em vì đã đồng ý đi hẹn hò
+                        với anh.
+                    </p>
+
+                    <p>
+                        Anh biết có thể một buổi đi chơi
+                        chẳng phải điều gì quá lớn lao,
+                        nhưng với anh, những khoảnh khắc
+                        được ở cạnh em luôn là những điều
+                        rất đáng để mong chờ.
+                    </p>
+
+                    <p>
+                        Cảm ơn em vì đã cùng anh chọn
+                        <strong id="letterDate">
+                            một ngày thật đẹp
+                        </strong>,
+                        cùng nhau nghĩ xem sẽ ăn gì,
+                        đi đâu và cùng tạo thêm một chút
+                        ký ức cho hai đứa mình.
+                    </p>
+
+                    <p>
+                        Anh hy vọng hôm đó em sẽ vui.
+                        Hy vọng món ăn em chọn sẽ ngon,
+                        nơi mình đến sẽ thật đẹp,
+                        và quan trọng nhất...
+                    </p>
+
+                    <p class="special-line">
+                        anh được nhìn thấy nụ cười của em
+                        thật nhiều.
+                    </p>
+
+                    <p>
+                        Thời gian của chúng ta không còn nhiều nữa rồi...
+                        Nếu sau này nếu có nhiều buổi hẹn khác,
+                        anh vẫn muốn được là người
+                        cùng em chọn ngày,
+                        chọn món,
+                        chọn nơi để đi.
+                    </p>
+
+                    <p>
+                        Cảm ơn em vì đã xuất hiện,
+                        đã ở bên anh,
+                        và đã trở thành một phần
+                        rất đáng yêu trong những ngày
+                        của anh.
+                    </p>
+
+                    <p>
+                        Mong rằng buổi hẹn này sẽ không
+                        chỉ là một buổi đi chơi,
+                        mà sẽ trở thành thêm một ký ức
+                        nhỏ xinh để sau này hai đứa có người khác
+                        thì sẽ vẫn còn đọng lại 1 tí ký ức của đôi ta rồi mỉm cười.
+                    </p>
+
+                </div>
+
+
+                <div class="letter-ending">
+
+                    <p>
+                        Hẹn em vào ngày của chúng ta nhé.
+                    </p>
+
+                    <div class="signature">
+                        With all my love,
+                        <strong>Ăm chã húi ❤️</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="letter-footer">
+                    Made with love, just for you ♡
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <div class="final-hearts"></div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
